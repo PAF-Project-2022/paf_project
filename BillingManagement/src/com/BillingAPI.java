@@ -62,7 +62,7 @@ public class BillingAPI {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String deleteBilling(String billData)
 	{
-	//Convert the input string to an XML document
+	//Convert The Input String To An XML Document
 	 Document doc = Jsoup.parse(billData, "", Parser.xmlParser());
 
 	//Read the value from the element <ID>
