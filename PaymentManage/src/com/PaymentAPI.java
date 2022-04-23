@@ -60,7 +60,7 @@ public class PaymentAPI {
 	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.TEXT_PLAIN)
 	public String deletePayment(String paymentData) {
-		// Convert the input string to an XML document
+		// Convert the input string to an XML Document
 		Document doc = Jsoup.parse(paymentData, "", Parser.xmlParser());
 
 		// Read the value from the element
