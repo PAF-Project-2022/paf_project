@@ -67,7 +67,7 @@ public class CustomerAPI {
 	//Convert the input string to an XML Document
 	 Document doc = Jsoup.parse(CustomerData, "", Parser.xmlParser());
 
-	//Read the value from the element <ID>
+	//Read the value from the Element <ID>
 	 String Customer_ID = doc.select("Customer_ID").text();
 	 String output = CustomerObj.deleteCustomer(Customer_ID);
 	return output;
