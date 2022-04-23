@@ -75,7 +75,7 @@ public class Billing {
 				String UnitPrice = rs.getString("bill_Unitprice");
 				String Total = rs.getString("bill_Total");
 
-				// Add into the html table
+				// Add into the HTML table
 				output += "<tr><td>" + ID + "</td>";
 				output += "<td>" + AccNo + "</td>";
 				output += "<td>" + Date + "</td>";
@@ -85,7 +85,7 @@ public class Billing {
 				
 			}
 			con.close();
-			// Complete the html table
+			// Complete the HTML table
 			output += "</table>";
 		} catch (Exception e) {
 			output = "Error while reading the billing.";
