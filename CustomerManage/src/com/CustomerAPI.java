@@ -46,7 +46,7 @@ public class CustomerAPI {
 	{
 	//Convert the input string to a JSON Object
 	 JsonObject Customer_Object = new JsonParser().parse(CustomerData).getAsJsonObject();
-	//Read the values from the JSON object
+	//Read the values from the JSON Object
 	 String Customer_ID = Customer_Object.get("Customer_ID").getAsString();
 	 String Customer_name = Customer_Object.get("Customer_name").getAsString();
 	 String Customer_address = Customer_Object.get("Customer_address").getAsString();
