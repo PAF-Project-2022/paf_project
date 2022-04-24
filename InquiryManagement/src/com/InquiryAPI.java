@@ -60,7 +60,7 @@ public class InquiryAPI {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String deleteInquiry(String inquiryData)
 	{
-	//Convert the input string to an XML document
+	//Convert the input string to an xml document
 	 Document doc = Jsoup.parse(inquiryData, "", Parser.xmlParser());
 
 	//Read the value from the element <ID>
