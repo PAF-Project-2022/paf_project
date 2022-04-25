@@ -44,9 +44,9 @@ public class CustomerAPI {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String updateCustomer(String CustomerData)
 	{
-	//Convert the input string to a JSON object
+	//Convert the input string to a JSON Object
 	 JsonObject Customer_Object = new JsonParser().parse(CustomerData).getAsJsonObject();
-	//Read the values from the JSON object
+	//Read the values from the JSON Object
 	 String Customer_ID = Customer_Object.get("Customer_ID").getAsString();
 	 String Customer_name = Customer_Object.get("Customer_name").getAsString();
 	 String Customer_address = Customer_Object.get("Customer_address").getAsString();
@@ -64,10 +64,10 @@ public class CustomerAPI {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String deleteCustomer(String CustomerData)
 	{
-	//Convert the input string to an XML document
+	//Convert the input string to an XML Document
 	 Document doc = Jsoup.parse(CustomerData, "", Parser.xmlParser());
 
-	//Read the value from the element <ID>
+	//Read the value from the Element <ID>
 	 String Customer_ID = doc.select("Customer_ID").text();
 	 String output = CustomerObj.deleteCustomer(Customer_ID);
 	return output;
